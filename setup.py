@@ -8,5 +8,5 @@ setup(
     packages=['genespector'],
     author='Iwo Kucinski',
     author_email='',
-    url='https://bitbucket.org/drwintermute/genespector/src/dev/'
+    url='https://github.com/Iwo-K/genespector'
 )
