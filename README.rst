@@ -51,7 +51,7 @@ For anyone interested in haematopoiesis, the Gottgens lab is hosting several Gen
 AnnData objects pre-processing
 ------------------
 
-Genespector simply requires an AnnData object to run. Most adata object should work straight away, but you may want to select features to be shown in the app by removing unnecessary information from the AnnData object. An example jupyter notebook with data preprocessing can be found in: example_genespector.ipynb
+Genespector simply requires an AnnData object to run. Most adata object should work straight away, but you may want to select features to be shown in the app by removing unnecessary information from the AnnData object. An example jupyter notebook with data preprocessing can be found here: https://nbviewer.jupyter.org/github/Iwo-K/genespector/blob/master/example_genespector.ipynb
 
 The adata objects are imported as follows:
   - Gene expression values are imported from the :pyth:`adata.X` (or :pyth:`adata.raw.X`, depending on the :pyth:`use_raw` argument)
