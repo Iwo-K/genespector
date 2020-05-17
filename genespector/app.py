@@ -117,25 +117,25 @@ def make_app(adata = None,
                 if any(colors < 0) and any(colors > 0):
                 # colorscale = 'RdBu'
                     colorscale = [[0, 'rgba(31, 58, 147, 1)'],
-                    [-min(colors)/(max(colors)-min(colors)), 'white'],
+                    [-min(colors)/(max(colors)-min(colors)), '#DCDCDC'],
                     [1, 'rgba(207, 0, 15, 1)']]
                 else:
                     colorscale = 'Viridis'#'Blackbody'
-                    # Specifying the markers
-                    cmin = min(colors)
-                    cmax = max(colors)
-                    if cmin_input != '':
-                        cmin = float(cmin_input)
-                    if cmax_input != '':
-                        cmax = float(cmax_input)
 
-                    marker = dict(color = colorSUB,
-                        cmin = cmin,
-                        cmax = cmax,
-                        opacity = opacity/100,
-                        colorscale = colorscale,
-                        colorbar = dict(thickness=14, x = 1.15, title = colorvalue, titleside = 'bottom'), #perhaps make optional?, then just pass dict() to switch off
-                        size = pointsize)
+                # Specifying the markers
+                cmin = min(colors)
+                cmax = max(colors)
+                if cmin_input != '':
+                    cmin = float(cmin_input)
+                if cmax_input != '':
+                    cmax = float(cmax_input)
+                marker = dict(color = colorSUB,
+                    cmin = cmin,
+                    cmax = cmax,
+                    opacity = opacity/100,
+                    colorscale = colorscale,
+                    colorbar = dict(thickness=14, x = 1.15, title = colorvalue, titleside = 'bottom'), #perhaps make optional?, then just pass dict() to switch off
+                    size = pointsize)
 
                 traces.append(go.Scattergl(
                     x = graphdata['coords'].loc[boolSUB,:][Xaxis].values,
