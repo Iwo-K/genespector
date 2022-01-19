@@ -22,7 +22,6 @@ def make_app(adata = None,
     layout = None,
     server = True,
     url_base_pathname = '/',
-    assets_folder = 'assets',
     run = True):
 
     #Specifying the current path to access the example dataset
@@ -48,8 +47,7 @@ def make_app(adata = None,
     #Setting up dash server
     app = dash.Dash(__name__,
         server = server,
-        url_base_pathname = url_base_pathname,
-        assets_folder = assets_folder)
+        url_base_pathname = url_base_pathname)
 
     #App Layout
     if subtitle is None:
@@ -169,4 +167,6 @@ def make_app(adata = None,
     else:
         return(app)
 
-    # app.run_server(debug=True)
+
+if __name__ == '__main__':
+    app.run_server(debug=True)

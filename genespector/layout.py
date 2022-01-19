@@ -82,16 +82,16 @@ def make_layout(graphdata, main_title, subtitle):
                     min=0,
                     max=100,
                     value=50,
-                    marks={x : str(x) for x in range(0,110, 10)})
-                    ], style = {'width' : 400, 'marginLeft': 200, 'marginTop' : 100, 'float' : 'left'}, className="two columns")
-                    #], style = {'float': 'right'}, className="two columns")
-                ], className="row"),
-        html.Label(children='Genespector by: Iwo Kucinski, Gottgens lab',
+                    marks={x : str(x) for x in range(0,110, 10)}),
+                html.Br(),
+                html.Label(children='Genespector by: Iwo Kucinski, Gottgens lab',
                             style = {'textAlign': 'left', 'color' : '#CCCCCC'}),
-        html.Label(children='Code: https://github.com/Iwo-K/genespector',
+                html.Label(children='Code: https://github.com/Iwo-K/genespector',
                             style = {'textAlign': 'left', 'color' : '#CCCCCC'}),
-        html.Label(children='Based on Dash/Plotly framework (https://plot.ly/products/dash/)',
+                html.Label(children='Based on Dash/Plotly framework (https://plot.ly/products/dash/)',
                             style = {'textAlign': 'left', 'color' : '#CCCCCC'})
+                ], style = {'width' : 400, 'marginLeft': 200, 'marginTop' : 100, 'float' : 'left'}, className="two columns")
+            ], className="row"),
 ])
 
     return(layout)
