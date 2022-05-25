@@ -18,12 +18,6 @@ def import_adata(adata, use_raw=True, make_var_unique=True):
     # Extracting categorical/string data
     catcols = [str(x) in ["category"] for x in adata.obs.dtypes]
     catinfo = adata.obs.loc[:, catcols]
-    # The app now takes only the categorical columns from the adata.obs slot
-    # Previous code to import both and covert everything into string
-    # catcols = [str(x) in ['object', 'category'] for x in adata.obs.dtypes]
-    # for x in catinfo:
-    #     catinfo[x] = catinfo[x].astype(str)
-    # Might need a warning here for columns which have too many levels
 
     # Extracting coordinate data (all the obsm fields)
     coords = pd.DataFrame(index=adata.obs.index)

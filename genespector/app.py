@@ -133,7 +133,7 @@ def make_app(
                 colorSUB = colors[boolSUB]
                 catinfoSUB = graphdata["catinfo"].loc[boolSUB, :]
 
-                # Added possibility of having diverging colorscale
+                # Option for diverging colorscale
                 if any(colors < 0) and any(colors > 0):
                     # colorscale = 'RdBu'
                     colorscale = [

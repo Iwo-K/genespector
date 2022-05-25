@@ -45,7 +45,6 @@ For anyone interested in haematopoiesis, the Gottgens lab is hosting several Gen
   a. http://128.232.224.252/sfdata/ - from the paper: Nestorowa et al. Blood 2016, PMID: 27365425
   b. http://128.232.224.252/LKdata/ - from the paper: Dahlin et al. Blood 2018, PMID: 29588278
 2. Human Bone Marrow cells (from Human Cell Atlas): http://128.232.224.252/HCABM/
-3. Human Cord Blood cells (from Human Cell Atlas): http://128.232.224.252/HCACBM/
 
 
 AnnData objects pre-processing
@@ -71,7 +70,7 @@ In python, where adata is the AnnData object of choice:
 
 .. code-block:: text
 
-    import genespector.app as gp
+    import genespector as gp
     gp.make_app(adata)
 
 Example output:
