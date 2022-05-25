@@ -1,7 +1,7 @@
 # Importing modules
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import html
+from dash import dcc
 import pandas as pd
 import plotly.graph_objs as go
 import numpy as np
@@ -163,10 +163,6 @@ def make_app(adata = None,
             }
         }
     if run == True:
-        app.run_server()
+        app.run_server(debug=False)
     else:
         return(app)
-
-
-if __name__ == '__main__':
-    app.run_server(debug=True)
