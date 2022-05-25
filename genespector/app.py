@@ -47,6 +47,7 @@ def make_app(
 
     # Importing data
     graphdata = import_adata(adata, use_raw, make_var_unique)
+    del adata
     # Setting up dash server
     app = dash.Dash(__name__, server=server, url_base_pathname=url_base_pathname)
 
