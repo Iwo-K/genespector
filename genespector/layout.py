@@ -31,7 +31,7 @@ def make_layout(graphdata, main_title, subtitle):
                                 },
                             ),
                         ],
-                        className="two columns",
+                        className="six columns",
                     ),
                     html.Div(
                         [
@@ -125,7 +125,7 @@ def make_layout(graphdata, main_title, subtitle):
                             "marginTop": 100,
                             "float": "left",
                         },
-                        className="two columns",
+                        className="six columns",
                     ),
                 ],
                 className="row",
