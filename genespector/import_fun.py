@@ -4,10 +4,14 @@ import numpy as np
 import scipy as scipy
 import re
 
-# Function for extracting data required for plotting by genespector from the
-# adata files
+
 def import_adata(adata, use_raw=True, make_var_unique=True):
-    # adata = sc.read(path, backed = 'r')
+    """
+    Function for extracting data from adata objects
+    required for plotting by genespector
+    Consider using backed adata to save memory?
+    """
+
     if make_var_unique:
         adata.var_names_make_unique()
 

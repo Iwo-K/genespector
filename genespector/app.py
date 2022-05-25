@@ -157,9 +157,6 @@ def make_app(
                     cmax=cmax,
                     opacity=opacity / 100,
                     colorscale=colorscale,
-                    colorbar=dict(
-                        thickness=14, x=1.15, title=colorvalue, titleside="bottom"
-                    ),  # perhaps make optional?, then just pass dict() to switch off
                     size=pointsize,
                 )
 
@@ -184,6 +181,10 @@ def make_app(
                     )
                 )
 
+        if not colorvalue == "categorical data":
+            traces[-1]["marker"]["colorbar"] = dict(
+                thickness=14, x=1.15, title=colorvalue
+            )
         if axiswitchvalue == "ON":
             axiscolor = "#BBBBBB"
         else:
