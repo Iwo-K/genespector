@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='genespector',
-    version='0.0.1',
+    version='0.1.0',
     description='Package for interactive viewing of AnnData objects/files',
     license='MIT',
     packages=['genespector'],
