@@ -24,6 +24,7 @@ def make_app(
     layout=None,
     server=True,
     url_base_pathname="/",
+    assets_folder='assets',
     run=True,
 ):
 
@@ -49,7 +50,10 @@ def make_app(
     graphdata = import_adata(adata, use_raw, make_var_unique)
     del adata
     # Setting up dash server
-    app = dash.Dash(__name__, server=server, url_base_pathname=url_base_pathname)
+    app = dash.Dash(__name__,
+                    server=server,
+                    url_base_pathname=url_base_pathname,
+                    assets_folder=assets_folder)
 
     # App Layout
     if subtitle is None:

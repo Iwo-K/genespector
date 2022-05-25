@@ -8,5 +8,7 @@ setup(
     packages=['genespector'],
     author='Iwo Kucinski',
     author_email='',
-    url='https://github.com/Iwo-K/genespector'
+    url='https://github.com/Iwo-K/genespector',
+    include_package_data=True,
+    package_data={'': ['data/tiny_example2.h5ad']}
 )
