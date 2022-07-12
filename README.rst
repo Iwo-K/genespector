@@ -32,7 +32,7 @@ Python > 3.4 and pip are required. To install the package:
 
 .. code-block:: text
 
-    pip install -e ./genespector/
+    pip install ./genespector/
 
 Examples
 --------
