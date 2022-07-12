@@ -39,6 +39,9 @@ def make_app(
     elif isinstance(adata, str):
         adata = sc.read(adata)
 
+    elif isinstance(adata, Path):
+        adata = sc.read(adata)
+
     elif isinstance(adata, AnnData):
         pass
 
